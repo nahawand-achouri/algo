@@ -1,0 +1,26 @@
+ALGORITHM algorithm_name
+VAR
+    str:STRING:="hello naha."
+    i:INTEGER;
+    len,nb-words : INTEGER:=0; 
+    nb-vowles:INTEGER:=0;
+
+
+
+BEGIN
+WHILE ( str[i] <> ".") DO
+      i:= i+1;
+      len := i
+END_WHILE
+
+FOR i FROM 0 TO len STEP 1 DO
+    IF (str [i]=" " ) THEN
+        nb-words:=nb-words+1
+    END_IF
+END_FOR
+FOR i FROM 0 TO len STEP 1 DO
+    IF (str [i] in ["a","e","o"]) THEN
+        nb-vowles:=nb-vowles+1
+    END_IF
+END_FOR
+END
