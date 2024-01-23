@@ -1,0 +1,47 @@
+ALGORITHM sum-element
+VAR
+    i, j:INTEGER
+    set1, set2:INTEGER
+    set1:=[3 , 1 , 7 , 9]
+    set2:=[2 , 4 , 1 , 9 , 3]
+    bnt: BOOLEAN:=false
+    sum:INTEGER:=0
+BEGIN
+    FOR i FROM 0 TO set1.length-1 STEP 1  DO
+       FOR j FROM 0 TO set2.length-1 STEP 1  DO
+        IF (set1[i]=set2[j]) THEN
+            bnt:=true
+            END_IF
+       END_FOR
+       IF (bnt=false) THEN
+        sum:=sum+set1[i]
+       END_IF
+    END_FOR
+
+    FOR i FROM 0 TO set2.length-1 STEP 1  DO
+       FOR j FROM 0 TO set1.length-1 STEP 1  DO
+        IF (set1[j]=set2[i]) THEN
+            bnt:=true
+            END_IF
+       END_FOR
+       IF (bnt=false) THEN
+        sum:=sum+set2[i] 
+       END_IF
+    END_FOR
+END
+    //exercise 2
+
+    ALGORITHM algorithm_name
+    VAR
+      a : ARRAY_OF FLOAT[M][N];
+      b : ARRAY_OF FLOAT[N][O];
+      c : ARRAY_OF FLOAT[M][O];
+    BEGIN
+     FOR i FROM 0 TO M-1 DO
+        FOR j FROM 0 TO O-1 DO
+           FOR k FROM 0 TO N-1 DO
+             c[i][j] := c[i][j] + a[i][k] *b[k][j];
+           END_FOR
+        END_FOR
+     END_FOR
+    END*/

@@ -1,0 +1,14 @@
+ALGORITHM accurence
+VAR
+    i:INTEGER
+    n:STRING=" le ver vert va vers le verre vert"
+    count:INTEGER:=0
+
+BEGIN
+FOR i FROM 1 TO n.length-1 STEP 1 DO
+      IF (n[i]="v") THEN
+        count:=count+1
+      END_IF
+END_FOR
+END_FOR
+END
